@@ -1,0 +1,60 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  position: fixed; /* Fija la cabecera en la parte superior */
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black; /* Fondo para que no se traslape con el contenido */
+  z-index: 10; /* Para que esté en el frente */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: yellow;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.register-button,
+.login-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
