@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import nppLogo from './npp.png'; 
 
@@ -20,7 +19,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <img
-          src={nppLogo} // Usamos la imagen importada aquí
+          src={nppLogo} 
           alt="Noopy"
           className="logo"
         />
@@ -47,18 +46,18 @@ const Login = () => {
               />
               <button
                 type="button"
-                className="btn btn-outline-secondary"
+                className="btn-outline-secondary"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? '🔓' : '🔒'}
               </button>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary w-100">Ingresar</button>
+          <button type="submit" className="caja">Ingresar</button>
         </form>
         <div className="links">
           <a href="/crear-cuenta">Crear cuenta</a>
-          <a href="/olvidar-contrasena">Olvidé mi contraseña</a>
+          <a href="/contraseña-olvidada">Olvidé mi Contraseña</a>
         </div>
       </div>
     </div>
@@ -66,4 +65,3 @@ const Login = () => {
 };
 
 export default Login;
-
