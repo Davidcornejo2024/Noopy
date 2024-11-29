@@ -1,23 +1,41 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NoopyWeb from './NoopyWeb'; // Importación de NoopyWeb
-import Login from './Login'; // Importación de Login
-import Form from './Form'; // Importación de Form
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './NoopyUP/Navbar';
+import Login from './NoopyUP/Login';
+import ProfileScreen from "./NoopyUP/perfil";
+import Welcome from './NoopyUP/Welcome'; // Importa el nuevo componente
+import CrearCuenta from './/NoopyUP/CrearCuenta'
+import About from './/NoopyUP/About'
+import SettingsScreen from './/NoopyUP/Settings'
 
-import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          {/* Ruta para la página principal */}
-          <Route path="/" element={<NoopyWeb />} />
-          {/* Ruta para la página de login */}
-          <Route path="/login" element={<Login />} />
-          {/* Ruta para la página de registro */}
-          <Route path="/form" element={<Form />} />
-        </Routes>
+      <div>
+        {/* Menú o navegación opcional */}
+        <header>
+          <nav>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/profile">Perfil</a></li>
+              <li><a href="/About">Acerca de</a></li>
+              <li><a href="/SettingsScreen">Configuración</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        {/* Configuración de rutas */}
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Welcome />} /> {/* Usa el componente Welcome */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/CrearCuenta" element={<CrearCuenta />} />
+            <Route path="/SettingsScreen" element={<SettingsScreen />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Navbar" element={<Navbar />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

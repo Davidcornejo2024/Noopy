@@ -1,0 +1,37 @@
+/* Navbar.css */
+
+header {
+    background-color: #000000; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 5px rgba(231, 216, 8, 0.2); 
+  }
+  
+  nav {
+    display: flex; /* Usar flexbox para el navbar */
+    justify-content: center; /* Centrar horizontalmente */
+  }
+  
+  ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    display: flex; /* Usar flexbox para los elementos de la lista */
+  }
+  
+  li {
+    margin: 0 15px; /* Espacio entre los elementos */
+  }
+  
+  a {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    padding: 8px 16px; /* Espaciado interno para el enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  }
+  
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente al pasar el mouse */
+    color: #ecf006; /* Color del texto al pasar el mouse */
+  }
